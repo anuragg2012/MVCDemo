@@ -1,0 +1,24 @@
+﻿@model MVCDemo.Models.Post
+
+<h1>Create Post</h1>
+
+<form asp-action="Create" method="post">
+    <div class="row">
+        <div class="col-md-6">
+            <label asp-for="Title"></label>
+            <input asp-for="Title" class="form-control" />
+            <span asp-validation-for="Title"></span>
+        </div>
+
+    </div>
+    <div>
+        <div class="col-md-6">
+            <label asp-for="Content"></label>
+            <textarea asp-for="Content" class="form-control"></textarea>
+            <span asp-validation-for="Content"></span>
+        </div>
+        <div class="col-md-6 mt-2">
+            <button type="submit" class="btn-info">Save</button>
+        </div>
+    </div>
+</form>
